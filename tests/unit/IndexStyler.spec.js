@@ -1,4 +1,4 @@
-import {mount, createLocalVue} from '@vue/test-utils';
+import { mount } from '@vue/test-utils';
 import IndexStyler from '@/components/IndexStyler.vue';
 import TestText from '@/TestText.js'
 
