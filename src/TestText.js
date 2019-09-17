@@ -1,3 +1,27 @@
-const testText = 
-`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
+const testText = `君を忘れない 曲がりくねった道を行く
+産まれたての太陽と 夢を渡る黄色い砂
+二度と戻れない くすぐり合って転げた日
+きっと 想像した以上に 騒がしい未来が僕を待ってる
+
+"愛してる"の響きだけで 強くなれる気がしたよ
+ささやかな喜びを つぶれるほど抱きしめて
+
+こぼれそうな思い 汚れた手で書き上げた
+あの手紙はすぐにでも 捨てて欲しいと言ったのに
+少しだけ眠い 冷たい水でこじあけて
+今 せかされるように 飛ばされるように 通り過ぎてく
+
+"愛してる"の響きだけで 強くなれる気がしたよ
+いつかまた この場所で 君とめぐり会いたい
+
+どんなに歩いても たどりつけない 心の雪でぬれた頬
+悪魔のふりして 切り裂いた歌を 春の風に舞う花びらに変えて
+
+君を忘れない 曲がりくねった道を行く
+きっと 想像した以上に 騒がしい未来が僕を待ってる
+
+"愛してる"の響きだけで 強くなれる気がしたよ
+ささやかな喜びをつぶれるほど抱きしめて
+ズルしても真面目にも生きてゆける気がしたよ
+いつかまた この場所で 君とめぐり会いたい`
 export default testText;

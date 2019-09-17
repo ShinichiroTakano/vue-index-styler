@@ -4,6 +4,9 @@ const testIndexObjects = [
     endIndex: 1,
     style: {
       backgroundColor: 'blue',
+    },
+    htmlAttributes: {
+      id: 1
     }
   },
   {
@@ -11,6 +14,10 @@ const testIndexObjects = [
     endIndex: 36,
     style: {
       color: 'skyblue'
+    },
+    htmlAttributes: {
+      id: 2,
+      class: 'test-class'
     }
   },
   {
@@ -19,6 +26,10 @@ const testIndexObjects = [
     style: {
       color: 'blue',
       fontSize: '29px'
+    },
+    htmlAttributes: {
+      id: 3,
+      class: 'test-class'
     }
   },
   {
@@ -26,6 +37,10 @@ const testIndexObjects = [
     endIndex: 388,
     style: {
       color: 'gold'
+    },
+    htmlAttributes: {
+      id: 3,
+      class: 'test-class'
     }
   }
 ]
