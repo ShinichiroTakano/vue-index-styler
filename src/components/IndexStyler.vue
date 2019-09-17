@@ -270,19 +270,25 @@ export default {
       }
       const isStyleObject = style instanceof Object && !(style instanceof Array)
       const isDefaultStyleObject = this.defaultStyle instanceof Object && !(this.defaultStyle instanceof Array)
-      if (isStyleObject || isDefaultStyleObject ) {
-        const appliedStyle = style || this.defaultStyle
-        for (const [property, value] of Object.entries(appliedStyle)) {
-          styledSpan.style[property] = value
-        }
+      let appliedStyle
+      if (isStyleObject && isDefaultStyleObject) {
+        appliedStyle = { ...this.defaultStyle, ...style }
+      } else if (isStyleObject || isDefaultStyleObject) {
+        appliedStyle = style || this.defaultStyle
+      }
+      for (const [property, value] of Object.entries(appliedStyle)) {
+        styledSpan.style[property] = value
       }
       const isHtmlAttributesObject = htmlAttributes instanceof Object && !( htmlAttributes instanceof Array)
       const isDefaultHtmlAttributesObject = this.defaultHtmlAttributes instanceof Object && !(this.defaultHtmlAttributes instanceof Array)
-      if (isHtmlAttributesObject || isDefaultHtmlAttributesObject ) {
-        const appliedHtmlAttributes = htmlAttributes || this.defaultHtmlAttributes
-        for (const [htmlAttributeName, value] of Object.entries(appliedHtmlAttributes)) {
-          styledSpan.setAttribute(htmlAttributeName, value)
-        }
+      let appliedHtmlAttributes
+      if (isHtmlAttributesObject && isDefaultHtmlAttributesObject) {
+        appliedHtmlAttributes = { ...this.defaultHtmlAttributes, ...htmlAttributes }
+      } else if (isHtmlAttributesObject || isDefaultHtmlAttributesObject) {
+        appliedHtmlAttributes = htmlAttributes || this.defaultHtmlAttributes
+      }
+      for (const [htmlAttributeName, value] of Object.entries(appliedHtmlAttributes)) {
+        styledSpan.setAttribute(htmlAttributeName, value)
       }
       const styledFragment = document.createDocumentFragment();
       styledFragment.appendChild(leftTextNodeOfSpan)
