@@ -1,34 +1,69 @@
 # vue-index-styler
 
-## Project setup
+#### Vue.js 2.X component styling text by index.
+
+Demo: https://shinichirotakano.github.io/vue-index-styler/
+
+### Install
+
+```bash
+npm install vue-js-modal --save
 ```
-npm install
+or
+```bash
+yarn add vue-js-modal --save
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+### How to use
+
+```javascript
+import IndexStyler from 'vue-index-styler'
+
+Vue.use(IndexStyler)
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+### Example use
+```vue
+<IndexStyler
+  rawText="~~~~~~~~~~~~~~~~~~~"
+  :indexObjects="[
+    {
+      start: 1,
+      end: 3,
+      style: {
+        color: 'white',
+        backgroundColor: 'red'
+      }
+    },
+    {
+      start: 4,
+      end: 8,
+      style: {
+        backgroundColor: 'pink',
+        borderRadius: '5px'
+      }
+    }
+  ]"
+/>
 ```
 
-### Run your tests
-```
-npm run test
-```
+#### Props
 
-### Lints and fixes files
-```
-npm run lint
-```
+| Name      | Required | Type          | Default     | Description   |
+| ---       | ---      | ---           | ---         | ---           |
+| rawText | true | String | | styled text |
+| indexObjects | true | Array | | [indexObject, indexObject, ・・・・]　* IndexObject detail is below. |
+| textContainerId | false | String | 'styled-text-container' | id of div involving styled text. |
+| defaultStyle | false | Object | | All indexeObjects are applied. Format is same as indexObject.style. |
+| defaultHtmlAttributes | false | Object | | All indexeObjects are applied. Format is same as indexObject.htmlAttributes. |
+| isFirstChar0 | false | Boolean | true | which to count rawText from 0 or 1. |
+| isSlicedInvolvingEndIndex | false | Boolean | true | which to involve indexObject.endIndex or not. |
+| isIndexObjectsWatched | false | Boolean | false | which to watch indexObjects change or not. |
 
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### IndexObject
+| Property      | Required | Type          | Default     | Example Value   |
+| ---       | ---      | ---           | ---         | ---           |
+| startIndex | true | Number | | 1 |
+| endIndex | true | Number | | 3 |
+| style | false | Object | | { color: 'red', backgroundColor: 'yellow', fontSize: '12px' } |
+| htmlAttributes | false | Object | | { id: '~~~', class: '~~~~' } |
