@@ -276,8 +276,10 @@ export default {
       } else if (isStyleObject || isDefaultStyleObject) {
         appliedStyle = style || this.defaultStyle
       }
-      for (const [property, value] of Object.entries(appliedStyle)) {
-        styledSpan.style[property] = value
+      if (appliedStyle) {
+        for (const [property, value] of Object.entries(appliedStyle)) {
+          styledSpan.style[property] = value
+        }
       }
       const isHtmlAttributesObject = htmlAttributes instanceof Object && !( htmlAttributes instanceof Array)
       const isDefaultHtmlAttributesObject = this.defaultHtmlAttributes instanceof Object && !(this.defaultHtmlAttributes instanceof Array)
@@ -287,8 +289,10 @@ export default {
       } else if (isHtmlAttributesObject || isDefaultHtmlAttributesObject) {
         appliedHtmlAttributes = htmlAttributes || this.defaultHtmlAttributes
       }
-      for (const [htmlAttributeName, value] of Object.entries(appliedHtmlAttributes)) {
-        styledSpan.setAttribute(htmlAttributeName, value)
+      if (appliedHtmlAttributes) {
+        for (const [htmlAttributeName, value] of Object.entries(appliedHtmlAttributes)) {
+          styledSpan.setAttribute(htmlAttributeName, value)
+        }
       }
       const styledFragment = document.createDocumentFragment();
       styledFragment.appendChild(leftTextNodeOfSpan)
