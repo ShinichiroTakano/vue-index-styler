@@ -1,11 +1,11 @@
 {
   "name": "vue-index-styler",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "main":"dist/vue-index-styler.common.js",
   "unpkg": "./dist/vue-index-styler.umd.min.js",
   "jsdelivr": "./dist/vue-index-styler.umd.min.js",
   "license": "MIT",
-  "author": "Shinichiro Takano",
+  "author": "Shinichiro Takano (https://github.com/ShinichiroTakano)",
   "files": [
     "dist"
   ],
@@ -30,8 +30,29 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
+    "core-js": "^2.6.5",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
-  }
+  },
+  "peerDependencies": {
+    "vue": "^2.6.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ShinichiroTakano/vue-index-styler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ShinichiroTakano/vue-index-styler/issues"
+  },
+  "homepage": "https://shinichirotakano.github.io/vue-index-styler/",
+  "keywords": [
+    "vue",
+    "vue2",
+    "vuejs",
+    "index",
+    "text",
+    "vue-index-styler"
+  ]
 }
