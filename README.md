@@ -49,6 +49,8 @@ Vue.use(IndexStyler)
 />
 ```
 
+#### Like this
+![Like this](https://github.com/ShinichiroTakano/vue-index-styler/blob/images/styled-text-sample.png)
 #### Props
 
 | Name      | Required | Type          | Default     | Description   |
