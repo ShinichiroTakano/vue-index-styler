@@ -25,22 +25,24 @@ Vue.use(IndexStyler)
 ### Example use
 ```vue
 <IndexStyler
-  rawText="~~~~~~~~~~~~~~~~~~~"
+  rawText="abcdefghijklmnopqrstuvwxyz"
   :indexObjects="[
     {
-      start: 1,
-      end: 3,
+      startIndex: 1,
+      endIndex: 3,
       style: {
         color: 'white',
-        backgroundColor: 'red'
+        backgroundColor: 'red',
+        padding: '3px 5px',
+        borderRadius: '4px'
       }
     },
     {
-      start: 4,
-      end: 8,
+      startIndex: 7,
+      endIndex: 14,
       style: {
         backgroundColor: 'pink',
-        borderRadius: '5px'
+        fontSize: '15px'
       }
     }
   ]"
